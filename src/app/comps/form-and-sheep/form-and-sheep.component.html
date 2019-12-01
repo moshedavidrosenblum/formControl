@@ -1,0 +1,43 @@
+<p>form-and-sheep works!</p>
+
+<p>form works!</p>
+
+<form>
+
+    name<input type="text" [formControl]="name" > <br>
+    phone<input type="text" [formControl]="phone"><br>
+
+    <button type="button" (click)="addLead()" >sumbmitt</button>
+
+         <table id="table" border="1">
+             <tr>
+                    <th> name</th>
+                    <th> phone</th>
+        
+             </tr>
+
+             <tr *ngFor= "let l of newLeads">
+                 <th>{{l.name}}</th>
+                 <th>{{l.phone}}</th>
+
+             </tr>
+           
+         </table>
+
+</form>
+<br>
+<br>
+
+
+
+<div>
+
+    name sheep:  <input [formControl]="sheep">
+    <br>
+    <button type="button" (click)="defualtSheep()">
+        det defual sheep value
+    </button>
+</div>
+<div>
+    name of sheep:{{sheep.value}}
+</div>
